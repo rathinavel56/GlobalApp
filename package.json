@@ -1,6 +1,6 @@
 {
   "name": "global-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,7 +22,21 @@
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+	"@agm/core": "1.0.0-beta.2",
+    "@angular/platform-server": "5.2.2",
+    "@ng-bootstrap/ng-bootstrap": "1.0.0",
+    "ajv": "6.2.1",
+    "ajv-keywords": "3.1.0",
+    "bootstrap": "4.0.0",
+    "copy-webpack-plugin": "4.3.0",
+    "font-awesome": "4.7.0",
+    "jquery": "^30.2.1",
+    "jw-bootstrap-switch-ng2": "1.0.10",
+    "ng2-nouislider": "1.7.7",
+    "nouislider": "9.2.0",
+    "popper.js": "1.12.9",
+    "rellax": "1.4.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",
