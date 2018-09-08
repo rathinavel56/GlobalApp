@@ -1,0 +1,47 @@
+/*!
+
+ =========================================================
+ * global-app-angular - v1.0.1
+ =========================================================
+
+ */
+
+@import 'global-app/variables';
+@import 'global-app/mixins';
+
+// Plugins CSS
+@import "global-app/plugins/plugin-bootstrap-switch";
+@import "global-app/plugins/plugin-nouislider";
+@import "global-app/plugins/plugin-datepicker";
+
+// Core CSS
+@import "global-app/buttons";
+@import "global-app/inputs";
+@import "global-app/checkboxes-radio";
+@import "global-app/progress";
+@import "global-app/badges";
+@import "global-app/pagination";
+@import "global-app/typography";
+@import "global-app/misc";
+@import "global-app/pills";
+
+// components
+@import "global-app/social-buttons";
+@import "global-app/tabs";
+@import "global-app/navbar";
+@import "global-app/dropdown";
+@import "global-app/alerts";
+@import "global-app/images";
+@import "global-app/popups";
+@import "global-app/nucleo-outline";
+@import "global-app/modals";
+@import "global-app/carousel";
+@import "global-app/cards";
+@import "global-app/footers";
+
+// example pages and sections
+@import "global-app/example-pages";
+@import "global-app/sections";
+
+
+@import "global-app/responsive";
