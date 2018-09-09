@@ -17,6 +17,7 @@ import {
   //LinkedinLoginProvider,
   //VkontakteLoginProvider,
 } from "angular-6-social-login-v2";
+import { BlockchainComponent } from './blockchain/blockchain.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -46,7 +47,8 @@ export function getAuthServiceConfigs() {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    BlockchainComponent
   ],
   imports: [
     BrowserAnimationsModule,
