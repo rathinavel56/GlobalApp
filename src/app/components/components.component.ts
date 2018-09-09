@@ -46,7 +46,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 	
 	socialSignIn(socialPlatform : string) {
 		let socialPlatformProvider;
-		if(socialPlatform == "facebook"){
+		/*if(socialPlatform == "facebook"){
 		  socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
 		}else if(socialPlatform == "google"){
 		  socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
@@ -54,7 +54,11 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 		  socialPlatformProvider = LinkedinLoginProvider.PROVIDER_ID;
 		} else if (socialPlatform == "vkontakte") {
 		  socialPlatformProvider = LinkedinLoginProvider.PROVIDER_ID;
-		}
+		}*/
+		
+		if(socialPlatform == "google"){
+		  socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+		} 
 		
 		
 		this.socialAuthService.signIn(socialPlatformProvider).then(
