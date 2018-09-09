@@ -2,6 +2,13 @@ import { Component, OnInit, Renderer, OnDestroy } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as Rellax from 'rellax';
+import {
+    AuthService,
+    FacebookLoginProvider,
+    GoogleLoginProvider,
+    LinkedinLoginProvider,
+    VkontakteLoginProvider
+} from 'angular-6-social-login-v2';
 
 @Component({
     selector: 'app-components',
@@ -32,11 +39,35 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 
     state_icon_primary = true;
 
-    constructor( private renderer : Renderer, config: NgbAccordionConfig) {
+    constructor( private renderer : Renderer, config: NgbAccordionConfig, private socialAuthService: AuthService) {
         config.closeOthers = true;
         config.type = 'info';
     }
-    isWeekend(date: NgbDateStruct) {
+	
+	socialSignIn(socialPlatform : string) {
+		let socialPlatformProvider;
+		if(socialPlatform == "facebook"){
+		  socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
+		}else if(socialPlatform == "google"){
+		  socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+		} else if (socialPlatform == "linkedin") {
+		  socialPlatformProvider = LinkedinLoginProvider.PROVIDER_ID;
+		} else if (socialPlatform == "vkontakte") {
+		  socialPlatformProvider = LinkedinLoginProvider.PROVIDER_ID;
+		}
+		
+		
+		this.socialAuthService.signIn(socialPlatformProvider).then(
+		  (userData) => {
+			console.log(socialPlatform+" sign in data : " , userData);
+			// Now sign-in with userData
+			// ...
+				
+		  }
+		);
+	}
+    
+	isWeekend(date: NgbDateStruct) {
         const d = new Date(date.year, date.month - 1, date.day);
         return d.getDay() === 0 || d.getDay() === 6;
     }
