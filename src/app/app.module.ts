@@ -18,6 +18,11 @@ import {
   //VkontakteLoginProvider,
 } from "angular-6-social-login-v2";
 import { BlockchainComponent } from './blockchain/blockchain.component';
+import { OurstrengthComponent } from './ourstrength/ourstrength.component';
+import { FrontenddevelopmentComponent } from './frontenddevelopment/frontenddevelopment.component';
+import { BackenddevelopmentComponent } from './backenddevelopment/backenddevelopment.component';
+import { OpensourcedevelopmentComponent } from './opensourcedevelopment/opensourcedevelopment.component';
+import { MobileapplicationdevelopmentComponent } from './mobileapplicationdevelopment/mobileapplicationdevelopment.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -48,7 +53,12 @@ export function getAuthServiceConfigs() {
   declarations: [
     AppComponent,
     NavbarComponent,
-    BlockchainComponent
+    BlockchainComponent,
+    OurstrengthComponent,
+    FrontenddevelopmentComponent,
+    BackenddevelopmentComponent,
+    OpensourcedevelopmentComponent,
+    MobileapplicationdevelopmentComponent
   ],
   imports: [
     BrowserAnimationsModule,
